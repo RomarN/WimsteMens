@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[2]:
 
 
 import time
@@ -27,11 +27,12 @@ backgroundcolor = _from_rgb((169,169,169))
 playercolor = _from_rgb((128,0,0))
 fontplayercolor = _from_rgb((255,255,255))
 
-fontplayersize = 20
-fontquestionsize = 15
+fontplayersize = 60
+fontquestionsize = 40
+entrywidth = 12
 
 
-# In[9]:
+# In[3]:
 
 
 class Player:
@@ -55,7 +56,7 @@ class Player:
         self.timeleft -= timetoremove
 
 
-# In[10]:
+# In[4]:
 
 
 class ExampleApp(tk.Tk):
@@ -385,7 +386,7 @@ class ExampleApp(tk.Tk):
         
 
 
-# In[11]:
+# In[5]:
 
 
 import tkinter as tk
@@ -411,13 +412,13 @@ class getNames(tk.Tk):
         self.label4.config(font=('helvetica', fontplayersize))
         self.label4.grid(row=3, column = 0)
         
-        self.entry1 = tk.Entry(self) 
+        self.entry1 = tk.Entry(self, width = entrywidth, font=('helvetica', fontplayersize)) 
         self.entry1.grid(row=1, column = 1)
         
-        self.entry2 = tk.Entry(self) 
+        self.entry2 = tk.Entry(self, width = entrywidth, font=('helvetica', fontplayersize)) 
         self.entry2.grid(row = 2, column = 1)
         
-        self.entry3 = tk.Entry(self) 
+        self.entry3 = tk.Entry(self, width = entrywidth, font=('helvetica', fontplayersize)) 
         self.entry3.grid(row =3, column = 1)
 
         self.button1 = tk.Button(self, text='Akkoord!', command= self.getSquareRoot , bg='brown', fg='white', font=('helvetica', fontquestionsize, 'bold'))
@@ -437,7 +438,7 @@ class getNames(tk.Tk):
             self.destroy()     
 
 
-# In[12]:
+# In[6]:
 
 
 root = getNames()
